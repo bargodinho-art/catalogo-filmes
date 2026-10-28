@@ -1,0 +1,317 @@
+/*cores e fonte em todos os suportes e plataformas*/
+
+:root {
+  --text: #283326;
+  --text-h: #283326;
+  --bg: #F7F3E8;
+  --border: #D5DCCF;
+  --code-bg: #f4f3ec;
+  --accent: #87977A;
+  --accent-bg: rgba(135, 151, 122, 0.1);
+  --accent-border: rgba(135, 151, 122, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /*informações gerais relativamente às plataformas filmes e tv*/
+
+  .movie_card_link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .movie_card_link:hover h3 {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  min-height: 100svh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 48px;
+  margin: 24px 0;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 24px 0;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 16px 0;
+}
+
+p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+summary {
+  cursor: pointer;
+}
+
+
+/*informações gerais relativamente às plataformas filmes e tv*/
+
+/* Elenco */
+.cast_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.cast_card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 12px;
+}
+
+.cast_card img {
+  display: block;
+  width: 100%;
+}
+
+.cast_card h3,
+.cast_card p {
+  margin: 8px 12px 0;
+}
+
+/* Botões de categorias (filmes e séries) */
+.category_buttons,
+.filmes-categorias,
+.series-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 15px;
+}
+
+.category_buttons button,
+.filmes-categorias button,
+.series-categorias button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #8b9b7e;
+  color: #283023;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.category_buttons button:hover,
+.filmes-categorias button:hover,
+.series-categorias button:hover {
+  background-color: #748566;
+}
+
+/* Páginas dos detalhes partilhados pelos filmes e séries */
+.movie_details {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  text-align: left;
+}
+
+.movie_info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px;
+  margin-top: 24px;
+}
+
+.movie_info img {
+  width: 260px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.movie_info div {
+  flex: 1 1 260px;
+}
+
+
+/*Filmes*/
+
+.category_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 15px;
+}
+
+.category_buttons button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #8b9b7e;
+  color: #283023;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.category_buttons button:hover {
+  background-color: #748566;
+}
+
+.movie_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 30px 20px;
+}
+
+.movie_card {
+  width: 200px;
+  max-width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.movie_poster {
+  width: 100%;
+  height: 300px;
+  background-color: #e6e3d8;
+}
+
+.movie_poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie_card h3 {
+  font-size: 18px;
+  margin: 15px 10px;
+}
+
+.movie_card p {
+  font-size: 14px;
+  margin: 10px;
+}
+
+.movies_main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.filmes-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.filmes-cartazes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.filme_card {
+  background: #ffffff;
+  color: #283125;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+}
+
+.filme_card img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .filmes-cartazes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .filmes-cartazes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/*Séries TV*/
+
+/* Cartazes das séries: 3 por fila no computador */
+.series-cartazes-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px;
+}
+
+/* Tablet: 2 por fila */
+@media (max-width: 800px) {
+  .series-cartazes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Telemóvel: 1 por fila */
+@media (max-width: 500px) {
+  .series-cartazes-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
